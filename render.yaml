@@ -7,10 +7,10 @@ services:
       dockerfile: Dockerfile
     envVars:
       - key: API_ID
-        value: 25136703
+        value: "25136703"
       - key: API_HASH
         value: "accfaf5ecd981c67e481328515c39f89"
       - key: BOT_TOKEN
         value: "8521103806:AAHHQ2XL_EokOXmJCdElfkkSrnYAkr0IVB4"
       - key: ADMIN_ID
-        value: 8272213732
+        value: "8272213732"
