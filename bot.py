@@ -17,8 +17,8 @@ logger = logging.getLogger(__name__)
 # Environment variables
 API_ID = int(os.getenv('API_ID', '25136703'))
 API_HASH = os.getenv('API_HASH', 'accfaf5ecd981c67e481328515c39f89')
-BOT_TOKEN = os.getenv('BOT_TOKEN', '8366493122:AAG7nl7a3BqXd8-oyTAHovAjc7UUuLeHb-4')
-ADMIN_ID = int(os.getenv('ADMIN_ID', '8027090675'))
+BOT_TOKEN = os.getenv('BOT_TOKEN', '8244179451:AAGqUWqvaBfAVN6nwzl0h7I_EunZihcpQhY')
+ADMIN_ID = int(os.getenv('ADMIN_ID', '8385462088'))
 PORT = int(os.environ.get('PORT', 10000))
 
 # Import Telethon
