@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 API_ID = int(os.getenv('API_ID', '25136703'))
 API_HASH = os.getenv('API_HASH', 'accfaf5ecd981c67e481328515c39f89')
 BOT_TOKEN = os.getenv('BOT_TOKEN', '8445905664:AAHmtWOra4ME4Lj3N-KLwgbJBdrDMYmYR1Y')
-ADMIN_ID = int(os.getenv('ADMIN_ID', '8272213732'))
+ADMIN_ID = int(os.getenv('ADMIN_ID', '8385462088'))
 
 # Force join channels
 SUPPORT_CHANNEL = "@shribots"  # Replace with your channel
