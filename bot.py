@@ -5,6 +5,8 @@ import re
 import asyncio
 import json
 from datetime import datetime
+from flask import Flask
+import threading
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -770,15 +772,39 @@ async def callback_handler(event):
 
 async def main():
     
-    # Bot info
+    # Flask app create karo
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "🤖 Telegram Bot is Running!"
+
+@app.route('/health')
+def health():
+    return "✅ OK"
+
+def run_web_server():
+    """Run Flask web server in separate thread"""
+    app.run(host='0.0.0.0', port=10000, debug=False)
+
+# Start web server in background
+web_thread = threading.Thread(target=run_web_server)
+web_thread.daemon = True
+web_thread.start()
+
+async def main():
+    # Web server already running in background
     me = await bot.get_me()
     logger.info(f"🎭 ShriBots Whisper Bot Started!")
-    logger.info(f"🤖 Bot: @{me.username}")
+    logger.info(f"🤖 Bot: @{me.username}") 
     logger.info(f"👑 Admin: {ADMIN_ID}")
     logger.info(f"📊 Clones: {len(clone_stats)}")
     logger.info(f"👥 Recent Users: {len(recent_users)}")
     logger.info("🚀 Bot is ready and working!")
+    logger.info("🌐 Web server running on port 10000")
 
 if __name__ == '__main__':
+    print("🚀 Starting Bot with Web Server...")
+    bot.start()
     bot.loop.run_until_complete(main())
     bot.run_until_disconnected()
