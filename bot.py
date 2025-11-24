@@ -769,8 +769,6 @@ async def callback_handler(event):
             await event.answer(msg_data['msg'], alert=True)
         else:
             await event.answer("Not for you!", alert=True)
-
-async def main():
     
     # Flask app create karo
 app = Flask(__name__)
