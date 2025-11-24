@@ -792,6 +792,28 @@ web_thread = threading.Thread(target=run_web_server)
 web_thread.daemon = True
 web_thread.start()
 
+# Initialize bot
+bot = TelegramClient('whisper_bot', API_ID, API_HASH).start(bot_token=BOT_TOKEN)
+
+# Flask App for Render port binding
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "🤖 Telegram Bot is Running!"
+
+@app.route('/health')
+def health():
+    return "✅ OK"
+
+def run_flask():
+    app.run(host='0.0.0.0', port=10000, debug=False, use_reloader=False)
+
+# Start Flask in separate thread
+flask_thread = threading.Thread(target=run_flask)
+flask_thread.daemon = True
+flask_thread.start()
+
 async def main():
     # Web server already running in background
     me = await bot.get_me()
