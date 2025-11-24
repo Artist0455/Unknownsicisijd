@@ -5,7 +5,6 @@ import re
 import asyncio
 import json
 from datetime import datetime
-from aiohttp import web
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
