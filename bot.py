@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 # Environment variables
 API_ID = int(os.getenv('API_ID', '25136703'))
 API_HASH = os.getenv('API_HASH', 'accfaf5ecd981c67e481328515c39f89')
-BOT_TOKEN = os.getenv('BOT_TOKEN', '8089842083:AAFmU0Jma_HNWfo7hvazxIQEw_woliuHzDE')
+BOT_TOKEN = os.getenv('BOT_TOKEN', '8513935704:AAHRbvT9Bm7ryFn7d4Lh4v1naAwADdd15KA')
 ADMIN_ID = int(os.getenv('ADMIN_ID', '8027090675'))
 
 # Support channels
