@@ -1,5 +1,5 @@
 services:
-  - type: web
+  - type: worker
     name: shribots-whisper-bot
     env: docker
     plan: free
@@ -11,8 +11,6 @@ services:
       - key: API_HASH
         value: "accfaf5ecd981c67e481328515c39f89"
       - key: BOT_TOKEN
-        value: "8089842083:AAFmU0Jma_HNWfo7hvazxIQEw_woliuHzDE"
+        value: "8513935704:AAHRbvT9Bm7ryFn7d4Lh4v1naAwADdd15KA"
       - key: ADMIN_ID
         value: "8027090675"
-      - key: PORT
-        value: "10000"
