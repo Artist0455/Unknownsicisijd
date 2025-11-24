@@ -777,5 +777,9 @@ async def main():
     logger.info("🚀 Bot is ready and working!")
 
 if __name__ == '__main__':
-    bot.loop.run_until_complete(main())
+    print("🤖 Bot Starting...")
+    
+    # Direct run - no complex loops
+    bot.start()
+    print("✅ Bot Started Successfully!")
     bot.run_until_disconnected()
