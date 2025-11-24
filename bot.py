@@ -769,20 +769,6 @@ async def callback_handler(event):
             await event.answer("Not for you!", alert=True)
 
 async def main():
-    # Create web server for Render port binding
-    async def health_check(request):
-        return web.Response(text="🤖 Telegram Bot is Running!")
-    
-    app = web.Application()
-    app.router.add_get('/', health_check)
-    app.router.add_get('/health', health_check)
-    
-    runner = web.AppRunner(app)
-    await runner.setup()
-    site = web.TCPSite(runner, '0.0.0.0', PORT)
-    await site.start()
-    
-    print(f"🌐 Web server started on port {PORT}")
     
     # Bot info
     me = await bot.get_me()
