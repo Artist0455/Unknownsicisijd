@@ -11,8 +11,8 @@ services:
       - key: API_HASH
         value: "accfaf5ecd981c67e481328515c39f89"
       - key: BOT_TOKEN
-        value: "8521103806:AAH5fhKjCyKxMOstFWaZ_YJjDP3EC1M3Yu4"
+        value: "8445905664:AAHmtWOra4ME4Lj3N-KLwgbJBdrDMYmYR1Y"
       - key: ADMIN_ID
-        value: "8272213732"
+        value: "8385462088"
       - key: PORT
         value: "10000"
